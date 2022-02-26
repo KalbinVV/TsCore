@@ -8,12 +8,17 @@ public class Response implements Serializable{
 	private final ResponseType responseType;
 	private final Object object;
 	
-	public Response(ResponseType requestType, Object object) {
-		this.responseType = requestType;
+	public Response(ResponseType responseType, Object object) {
+		this.responseType = responseType;
 		this.object = object;
 	}
+	
+	public Response(ResponseType responseType) {
+		this.responseType = responseType;
+		this.object = null;
+	}
 
-	public ResponseType getRequestType() {
+	public ResponseType getResponseType() {
 		return responseType;
 	}
 

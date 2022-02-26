@@ -8,6 +8,10 @@ public interface User {
 	
 	public void setUserStatus(UserStatus userStatus);
 	public UserStatus getUserStatus();
+	public void setUserType(UserType userType);
+	public UserType getUserType();
+	public void setPass(String pass);
+	public String getPass();
 	public void setName(String name);
 	public String getName();
 	public void setAddress(InetAddress inetAddress);

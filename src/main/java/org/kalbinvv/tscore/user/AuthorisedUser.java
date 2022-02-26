@@ -5,19 +5,21 @@ import java.net.InetAddress;
 
 import org.kalbinvv.tscore.test.Test;
 
-public class AnonymousUser implements User, Serializable{
+public class AuthorisedUser implements User, Serializable{
 
-	private static final long serialVersionUID = -2220058324601010364L;
+	private static final long serialVersionUID = -1279985367451585234L;
 	private final String name;
+	private final String pass;
 	private UserStatus userStatus;
 	private UserType userType;
 	private InetAddress address;
 	private Test test;
 	
-	public AnonymousUser(String name){
+	public AuthorisedUser(String name, String pass){
 		this.name = name;
+		this.pass = pass;
 		userStatus = UserStatus.NotConnected;
-		userType = UserType.Quest;
+		userType = UserType.User;
 	}
 	
 	@Override
@@ -78,14 +80,15 @@ public class AnonymousUser implements User, Serializable{
 
 	@Override
 	public String getPass() {
-		throw new UnsupportedOperationException();
+		return pass;
 	}
 	
 	@Override
 	public String toString() {
-		return "AnonymousUser{"
+		return "User{"
 				+ "userStatus='"+userStatus+"', "
-				+ "name='"+name+", "
+				+ "name='"+name+"', "
+				+ "pass='"+pass+"', "
 				+ "address='"+address+"', "
 				+ "test='"+test+""
 				+ "'}";
