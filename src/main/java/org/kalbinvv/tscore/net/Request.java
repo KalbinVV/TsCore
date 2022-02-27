@@ -13,7 +13,7 @@ public class Request implements Serializable{
 		this.object = object;
 	}
 
-	public RequestType getRequestType() {
+	public RequestType getType() {
 		return requestType;
 	}
 
