@@ -1,7 +1,11 @@
 package org.kalbinvv.tscore.user;
 
-public class UserEntry {
+import java.io.Serializable;
 
+public class UserEntry implements Serializable{
+
+	private static final long serialVersionUID = -2946316636980408516L;
+	
 	public String name;
 	public String pass;
 	
@@ -9,5 +13,14 @@ public class UserEntry {
 		this.name = name;
 		this.pass = pass;
 	}
+	
+	@Override
+	public String toString() {
+		return "UserEntry{"
+				+ "name='" + name + "', "
+				+ "pass='" + pass + "'"
+				+ "}";
+	}
+	
 	
 }
