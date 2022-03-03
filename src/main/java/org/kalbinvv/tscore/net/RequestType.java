@@ -8,6 +8,7 @@ public enum RequestType {
 	AddUser,
 	AddAdminUser,
 	ChangesAnonymousUsersAllowedSetting,
-	GetAnonymousUsersAllowedSetting
+	GetAnonymousUsersAllowedSetting,
+	GetTestsList
 	
 }
