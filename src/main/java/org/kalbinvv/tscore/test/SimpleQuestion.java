@@ -2,6 +2,7 @@ package org.kalbinvv.tscore.test;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public class SimpleQuestion implements Question, Serializable{
@@ -12,10 +13,10 @@ public class SimpleQuestion implements Question, Serializable{
 	private final List<String> variants;
 	private List<String> userSelect; 
 	
-	public SimpleQuestion(String title, QuestionType questionType, List<String> variants){
+	public SimpleQuestion(String title, QuestionType questionType, Collection<String> variants){
 		this.title = title;
 		this.questionType = questionType;
-		this.variants = variants;
+		this.variants = new ArrayList<String>(variants);
 		userSelect = new ArrayList<String>();
 	}
 	
