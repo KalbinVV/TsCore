@@ -64,6 +64,7 @@ public class SimpleTest implements Test, Serializable{
 				+ "questions='" + questions + ", "
 				+ "name='" + name + "', "
 				+ "description='" + description + "', "
+				+ "id='" + id + "', "
 				+ "currentQuestion='" + currentQuestion + "'"
 				+ "}";
 	}

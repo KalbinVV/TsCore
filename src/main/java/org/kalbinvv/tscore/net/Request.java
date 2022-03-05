@@ -22,7 +22,7 @@ public class Request implements Serializable{
 		this.object = object;
 		this.userWhoSend = userWhoSend;
 	}
-
+	
 	public RequestType getType() {
 		return requestType;
 	}

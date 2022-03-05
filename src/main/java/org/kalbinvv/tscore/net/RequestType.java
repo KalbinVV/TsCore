@@ -4,12 +4,14 @@ public enum RequestType {
 
 	UserConnect,
 	UserExit,
-	GetOnlineUsersList,
+	GetOnlineUsers,
 	AddUser,
 	AddAdminUser,
 	ChangesAnonymousUsersAllowedSetting,
 	GetAnonymousUsersAllowedSetting,
-	GetTestsList,
-	GetLogs
+	GetTests,
+	GetLogs,
+	CompleteTest,
+	GetTestsResults
 	
 }
