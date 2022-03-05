@@ -12,7 +12,7 @@ public class SimpleQuestion implements Question, Serializable{
 	private final List<String> variants;
 	private List<String> userSelect; 
 	
-	SimpleQuestion(String title, QuestionType questionType, List<String> variants){
+	public SimpleQuestion(String title, QuestionType questionType, List<String> variants){
 		this.title = title;
 		this.questionType = questionType;
 		this.variants = variants;

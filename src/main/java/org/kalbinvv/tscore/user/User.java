@@ -88,6 +88,10 @@ public class User implements Serializable{
 		return new UserEntry(name, pass);
 	}
 	
+	public String getStringRepresentation() {
+		return name + " " + address;
+	}
+	
 	public String toString() {
 		return "User{"
 				+ "userStatus='"+userStatus+"', "

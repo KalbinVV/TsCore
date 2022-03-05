@@ -20,9 +20,6 @@ public class SimpleTest implements Test, Serializable{
 		setCurrentQuestion(0);
 	}
 
-	public Integer getCurrentQuestion() {
-		return currentQuestion;
-	}
 
 
 	public void setCurrentQuestion(Integer currentQuestion) {
@@ -45,6 +42,16 @@ public class SimpleTest implements Test, Serializable{
 	}
 	
 	@Override
+	public int getCurrentQuestion() {
+		return currentQuestion;
+	}
+	
+	@Override
+	public void setCurrentQuestion(int currentQuestion) {
+		this.currentQuestion = currentQuestion;	
+	}
+	
+	@Override
 	public String toString() {
 		return "SimpleTest{"
 				+ "questions='" + questions + ", "
@@ -53,6 +60,5 @@ public class SimpleTest implements Test, Serializable{
 				+ "currentQuestion='" + currentQuestion + "'"
 				+ "}";
 	}
-	
 	
 }
