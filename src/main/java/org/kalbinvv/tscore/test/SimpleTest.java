@@ -11,14 +11,12 @@ public class SimpleTest implements Test, Serializable{
 	private final List<Question> questions;
 	private final String name;
 	private final String description;
-	private final Integer id;
 	private Integer currentQuestion;
 	
-	public SimpleTest(String name, String description, Collection<Question> questions, Integer id){
+	public SimpleTest(String name, String description, Collection<Question> questions){
 		this.questions = new ArrayList<Question>(questions);
 		this.name = name;
 		this.description = description;
-		this.id = id;
 		setCurrentQuestion(0);
 	}
 
@@ -52,11 +50,6 @@ public class SimpleTest implements Test, Serializable{
 	public void setCurrentQuestion(int currentQuestion) {
 		this.currentQuestion = currentQuestion;	
 	}
-
-	@Override
-	public int getID() {
-		return id;
-	}
 	
 	@Override
 	public String toString() {
@@ -64,7 +57,6 @@ public class SimpleTest implements Test, Serializable{
 				+ "questions='" + questions + ", "
 				+ "name='" + name + "', "
 				+ "description='" + description + "', "
-				+ "id='" + id + "', "
 				+ "currentQuestion='" + currentQuestion + "'"
 				+ "}";
 	}
