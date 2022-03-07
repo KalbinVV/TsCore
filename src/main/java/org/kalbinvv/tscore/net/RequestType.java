@@ -13,6 +13,7 @@ public enum RequestType {
 	GetTests,
 	GetLogs,
 	CompleteTest,
-	GetTestsResults
+	GetTestsResults,
+	GetTestData
 	
 }
