@@ -14,6 +14,6 @@ public enum RequestType {
 	GetLogs,
 	CompleteTest,
 	GetTestsResults,
-	GetTestData
-	
+	GetTestData,
+	RemoveTest
 }
