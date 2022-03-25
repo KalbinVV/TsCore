@@ -6,10 +6,5 @@
   <name>TsCore</name>
   <description>Ядро для системы тестирования.</description>
   <dependencies>
-	<dependency>
-    	<groupId>com.google.code.gson</groupId>
-    	<artifactId>gson</artifactId>
-    	<version>2.9.0</version>
-	</dependency>
   </dependencies>
 </project>
