@@ -1,6 +1,7 @@
 package org.kalbinvv.tscore.test;
 
 import java.util.List;
+
 public interface Question {
 
 	public String getTitle();

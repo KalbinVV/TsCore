@@ -1,15 +1,15 @@
 package org.kalbinvv.tscore.test;
 
 import java.io.Serializable;
-import java.util.List;
+import java.util.Map;
 
 public class TestData implements Serializable{
 
 	private static final long serialVersionUID = 5002015523483309468L;
 	private final Test test;
-	private final List<List<String>> answers;
+	private final Map<String, Answer> answers;
 
-	public TestData(Test test, List<List<String>> answers) {
+	public TestData(Test test, Map<String, Answer> answers) {
 		this.test = test;
 		this.answers = answers;
 	}
@@ -18,7 +18,7 @@ public class TestData implements Serializable{
 		return test;
 	}
 
-	public List<List<String>> getAnswers() {
+	public Map<String, Answer> getAnswers() {
 		return answers;
 	}
 
