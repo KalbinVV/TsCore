@@ -9,17 +9,26 @@ public class SimpleTest implements Test, Serializable{
 	
 	private static final long serialVersionUID = -3711852710197704976L;
 	private final List<Question> questions;
+	private final boolean shouldBeShuffled;
 	private final String name;
 	private final String description;
-	private Integer currentQuestion;
+	private Integer currentQuestion = 0;
 	
-	public SimpleTest(String name, String description, Collection<Question> questions){
+	public SimpleTest(String name, String description, Collection<Question> questions,
+			boolean shouldBeShuffled){
 		this.questions = new ArrayList<Question>(questions);
 		this.name = name;
 		this.description = description;
-		setCurrentQuestion(0);
+		this.shouldBeShuffled = shouldBeShuffled;
 	}
 
+	
+	public SimpleTest(Test test) {
+		this.questions = test.getQuestions();
+		this.name = test.getName();
+		this.description = test.getDescription();
+		this.shouldBeShuffled = test.isShuffled();
+	}
 
 
 	public void setCurrentQuestion(Integer currentQuestion) {
@@ -52,12 +61,18 @@ public class SimpleTest implements Test, Serializable{
 	}
 	
 	@Override
+	public boolean isShuffled() {
+		return shouldBeShuffled;
+	}
+	
+	@Override
 	public String toString() {
 		return "SimpleTest{"
 				+ "questions='" + questions + ", "
 				+ "name='" + name + "', "
 				+ "description='" + description + "', "
-				+ "currentQuestion='" + currentQuestion + "'"
+				+ "currentQuestion='" + currentQuestion + "',"
+				+ "shouldBeShuffled='" + shouldBeShuffled + "'"
 				+ "}";
 	}
 	

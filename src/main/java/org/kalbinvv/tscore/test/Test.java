@@ -9,5 +9,5 @@ public interface Test{
 	public String getDescription();
 	public int getCurrentQuestion();
 	public void setCurrentQuestion(int currentQuestion);
-	
+	public boolean isShuffled();
 }
