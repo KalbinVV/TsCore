@@ -5,6 +5,7 @@ public enum RequestType {
 	UserConnect,
 	UserExit,
 	GetOnlineUsers,
+	GetUsers,
 	AddUser,
 	AddAdminUser,
 	ChangesAnonymousUsersAllowedSetting,
